@@ -172,7 +172,7 @@ public class Gerador_tela extends javax.swing.JFrame {
                         usu.atalho_start(i);
                         txt+=i.toString()+"\n";
                     } catch (IOException ex) {
-                        System.out.println("Erro: "+ex.getMessage());
+                        System.out.println("Erro: "+ex.getMessage()+" erro: "+ex.fillInStackTrace());
                     }
                 }
 

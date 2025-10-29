@@ -95,11 +95,14 @@ public class Usuario {
             arquivo.createNewFile();
             FileReader ler = new FileReader(arquivo);
             System.out.println(destino + usu + "\\AppData\\Local\\DataAce\\start/start.ini");
+
+            String inicio = destino + usu + "\\AppData\\Local\\DataAce/AlphaERP.exe";
+
             FileWriter write = new FileWriter(arquivo);
             BufferedWriter buffWrite = new BufferedWriter(write);
             buffWrite.write("[Application]\n"
-                    + "LocalApp=C:\\DataAce\\AlphaERP.exe\n"
-                    + "RemoteApp=\\\\IP\\dataace\\alphaERP\\AlphaERP.exe\n"
+                    + "LocalApp=" + inicio
+                    + "\nRemoteApp=\\\\IP\\dataace\\alphaERP\\AlphaERP.exe\n"
                     + "\n"
                     + "# para usuarios de servidor local - \n"
                     + "#Way = \\\\\\\\IP\\\\Atualizador_AlphaERP\\\\alphaERP\n"
@@ -127,13 +130,14 @@ public class Usuario {
                     + "5=<" + origem + "\\DLL\\lib>*.dll<" + destino + usu + "\\AppData\\Local\\DataAce\\DLL\\lib>\n"
                     + "6=<" + origem + "\\DLL\\lib\\10>*.dll<" + destino + usu + "\\AppData\\Local\\DataAce\\DLL\\lib\\10>\n"
                     + "7=<" + origem + ">conf.ini<" + destino + usu + "\\AppData\\Local\\DataAce>\n"
-                    + "8=<" + origem + ">logo*.*<" + destino + usu + "\\AppData\\Local\\DataAce>\n"
+                    + "8=<" + origem + ">Logos*.*<" + destino + usu + "\\AppData\\Local\\DataAce>\n"
                     + "9=<" + origem + ">jasperviewer.jar<" + destino + usu + "\\AppData\\Local\\DataAce>\n"
                     + "10=<" + origem + "\\jasperviewer_lib>*.jar<" + destino + usu + "\\AppData\\Local\\DataAce\\jasperviewer_lib>\n"
                     + "11=<" + origem + "\\relatorios>th*.*<" + destino + usu + "\\AppData\\Local\\DataAce\\relatorios>\n"
-                    + "12=<" + origem + "\\Schemas>*.*<" + destino + usu + "\\AppData\\Local\\DataAce\\Schemas>\n"
-                    + "13=<" + origem + ">*.fr3<" + destino + usu + "\\AppData\\Local\\DataAce>\n"
-                    + "14=<" + origem + "\\relatorios>*.fr3<" + destino + usu + "\\AppData\\Local\\DataAce\\relatorios>");
+                    + "12=<" + origem + "\\relatorios>rel*.*<" + destino + usu + "\\AppData\\Local\\DataAce\\relatorios>\n"
+                    + "13=<" + origem + "\\Schemas>*.*<" + destino + usu + "\\AppData\\Local\\DataAce\\Schemas>\n"
+                    + "14=<" + origem + ">*.fr3<" + destino + usu + "\\AppData\\Local\\DataAce>\n"
+                    + "15=<" + origem + "\\relatorios>*.fr3<" + destino + usu + "\\AppData\\Local\\DataAce\\relatorios>");
 
             //write.close();
             buffWrite.close();
@@ -183,9 +187,15 @@ public class Usuario {
 
             File arquivo_startExe = new File(destino + usu + "\\AppData\\Local\\DataAce\\start/start.exe");
             if (arquivo_startExe.exists()) {
+                File criarTemp = new File("C:\\Users\\" + usu + "\\OneDrive\\Área de trabalho/AlphaERP.exe");
+              
+                
+                 criarTemp.createNewFile();
+                
                 System.out.println("Executável existe");
                 String caminho_origem = "C:\\Users\\" + usu + "\\AppData\\Local\\DataAce\\start/start.exe";
-                String caminho_desktop = "C:\\Users\\" + usu + "\\Desktop";
+                String caminho_desktop = "C:\\Users\\" + usu + "\\OneDrive\\Área de trabalho";
+
                 String caminho_destino = caminho_desktop + "\\AlphaERP.exe";
                 Path link = Paths.get(caminho_destino);
 
