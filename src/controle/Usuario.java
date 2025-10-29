@@ -130,7 +130,7 @@ public class Usuario {
                     + "5=<" + origem + "\\DLL\\lib>*.dll<" + destino + usu + "\\AppData\\Local\\DataAce\\DLL\\lib>\n"
                     + "6=<" + origem + "\\DLL\\lib\\10>*.dll<" + destino + usu + "\\AppData\\Local\\DataAce\\DLL\\lib\\10>\n"
                     + "7=<" + origem + ">conf.ini<" + destino + usu + "\\AppData\\Local\\DataAce>\n"
-                    + "8=<" + origem + ">Logos*.*<" + destino + usu + "\\AppData\\Local\\DataAce>\n"
+                    + "8=<" + origem + "\\Logos>*.*<" + destino + usu + "\\AppData\\Local\\DataAce\\Logos>\n"
                     + "9=<" + origem + ">jasperviewer.jar<" + destino + usu + "\\AppData\\Local\\DataAce>\n"
                     + "10=<" + origem + "\\jasperviewer_lib>*.jar<" + destino + usu + "\\AppData\\Local\\DataAce\\jasperviewer_lib>\n"
                     + "11=<" + origem + "\\relatorios>th*.*<" + destino + usu + "\\AppData\\Local\\DataAce\\relatorios>\n"
