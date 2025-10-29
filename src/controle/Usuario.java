@@ -137,7 +137,11 @@ public class Usuario {
                     + "12=<" + origem + "\\relatorios>rel*.*<" + destino + usu + "\\AppData\\Local\\DataAce\\relatorios>\n"
                     + "13=<" + origem + "\\Schemas>*.*<" + destino + usu + "\\AppData\\Local\\DataAce\\Schemas>\n"
                     + "14=<" + origem + ">*.fr3<" + destino + usu + "\\AppData\\Local\\DataAce>\n"
-                    + "15=<" + origem + "\\relatorios>*.fr3<" + destino + usu + "\\AppData\\Local\\DataAce\\relatorios>");
+                    + "15=<" + origem + "\\relatorios>*.fr3<" + destino + usu + "\\AppData\\Local\\DataAce\\relatorios>\n"
+                    + "16=<" + origem + "\\lib>*.dll<" + destino + usu + "\\AppData\\Local\\DataAce\\lib>\n"
+                    + "17=<" + origem + "\\lib\\10>*.dll<" + destino + usu + "\\AppData\\Local\\DataAce\\lib\\10>\n"
+                    + "18=<" + origem + "\\Logos\\Colorido>*.*<" + destino + usu + "\\AppData\\Local\\DataAce\\Logos\\Colorido>\n"
+                    + "19=<" + origem + ">*.fr3<" + destino + usu + "\\AppData\\Local\\DataAce\\relatorios>");
 
             //write.close();
             buffWrite.close();
@@ -188,10 +192,9 @@ public class Usuario {
             File arquivo_startExe = new File(destino + usu + "\\AppData\\Local\\DataAce\\start/start.exe");
             if (arquivo_startExe.exists()) {
                 File criarTemp = new File("C:\\Users\\" + usu + "\\OneDrive\\Área de trabalho/AlphaERP.exe");
-              
-                
-                 criarTemp.createNewFile();
-                
+
+                criarTemp.createNewFile();
+
                 System.out.println("Executável existe");
                 String caminho_origem = "C:\\Users\\" + usu + "\\AppData\\Local\\DataAce\\start/start.exe";
                 String caminho_desktop = "C:\\Users\\" + usu + "\\OneDrive\\Área de trabalho";
